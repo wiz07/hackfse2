@@ -1,0 +1,351 @@
+/* * {
+    box-sizing: border-box; */
+  /* } */
+  
+  .field {
+    margin: 5px 0 5px 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+    box-sizing: border-box;
+  }
+  
+  .field:hover {
+    background-color: rgba(223, 239, 248, 0.8);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+
+  }
+  
+  .field.active {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+  }
+  
+  .field.active input {
+    padding: 24px 16px 8px 16px;
+    background-color: #ffffff;
+    border-radius: 15px;
+
+  }
+  
+  .field.active input + label {
+    top: 4px;
+    opacity: 1;
+    color: #512da8;
+    border-radius: 15px;
+
+  }
+  
+  .field input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+    position: relative;
+    padding: 0px 16px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #282828;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 16px;
+    line-height: normal;    
+    font-weight: bold;
+    box-shadow: 0px 4px 20px 0px transparent;
+    transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+      0.1s padding ease-in-out;
+    -webkit-appearance: none;
+  }
+  
+  .field input + label {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.1s all ease-in-out;
+    border-radius: 15px;
+
+  }
+
+  .regdiv{
+    position: fixed;
+    left: 430px;
+    width: 100%;
+  }
+.or{
+    position: relative;
+    left: 215px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.form-wrapper {
+    display: block;
+    width: 30%;
+    max-width: 100%;
+    min-width: 100px;
+    min-height: fit-content;
+    padding: 1px 40px;
+    border-radius: 30px;
+    box-shadow: 0px 8px 36px #214;
+    background-color: transparent;
+    position: absolute;
+    left: 32%;
+  }
+
+.loader{
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  right: 44%;
+  top: 0px;
+}
+
+.errmsg{
+  position: fixed;
+    bottom: 59px;
+    left: 36%;
+    font-size: 26px;
+    font-weight: bold;
+    color: darkred;
+}
+
+
+.dropbtn {
+  background-color: darkgrey;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu{
+  cursor: pointer;
+  position: absolute;
+  left: 85%;
+  display: block;
+  border-radius: 18px;
+  background: #0d4846;
+  padding: 25px,78px;
+  height: 48px;
+  width: 165px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #0d7068;
+  min-width: 220px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+  top: 48px;
+  border-radius: 10px;
+  left: 3px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.textBox{
+  min-width: 60%;
+  max-width: 70%;
+  left: 18%;
+  position: absolute;
+  min-height: 20%;
+  max-height: 20%;
+  font-size: 18px;
+  border-radius: 9px;
+  opacity: 1;
+  color: #107895;
+}
+
+.textBtn{
+  cursor: pointer;
+  position: absolute;
+    left: 1%;
+    display: block;
+    top: 18%;
+    border-radius: 18px;
+    background: #096c89;
+    padding: 25px,78px;
+    height: 81px;
+    width: 165px;
+    text-align: center;
+    font-size: 26px;
+    
+}
+
+
+.personImg {
+  position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 6px;
+    top: 14px;
+    border-radius: 32px;
+}
+
+.profileParent{
+  display: inline-grid;
+  /* grid-template-columns: auto; */ 
+  padding: 10px;
+}
+.profileChild{
+  position: absolute;
+    top: 50%;
+}
+
+.profile-wrapper {
+  display: block;
+    width: 72%;
+    max-width: 100%;
+    min-width: 100px;
+    min-height: 309px;
+    padding: 1px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #214;
+    background-color: transparent;
+    position: absolute;
+    top: 37%;
+}
+
+.allusers-wrapper {
+    width: 40%;
+    max-width: 100%;
+    min-width: 100px;
+    min-height: 92px;
+    padding: 1px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #214;
+    background-color: transparent;
+    /* position: absolute; */
+}
+
+.personImgUser {
+  position: relative;
+    width: 60px;
+    height: 60px;
+    left: -13px;
+    top: 6px;
+    border-radius: 32px;
+    margin-bottom: 9px;
+}
+
+.usertweet-wrapper {
+  /* width: 650px; */
+    max-width: 80%;
+    min-width: 65%;
+    min-height: 140px;
+    padding: 1px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #214;
+    background-color: transparent;
+}
+
+.deleteLogo {
+  position: sticky;
+    width: 28px;
+    height: 34px;
+    top: -40px;
+    left: 58%;
+    cursor: pointer;
+}
+
+.alltweet-wrapper{
+  max-width: 80%;
+  min-width: 65%;
+  min-height: 140px;
+  padding: 1px 40px;
+  border-radius: 6px;
+  box-shadow: 0px 8px 36px #214;
+  background-color: transparent;
+}
+.likeLogo{
+  position: sticky;
+    width: 28px;
+    height: 34px;
+    cursor: pointer;
+}
+.replyText {
+  font-size: 23px;
+    padding-top: 0px;
+    padding-inline: 100px;
+    cursor: pointer;
+}
+.replyTextarea{
+  min-width: 320px;
+    max-width: 330px;
+    position: relative;
+    min-height: 130px;
+    max-height: 130px;
+    margin: 0px;
+    width: 540px;
+    height: 184px;
+    font-size: 18px;
+    border-radius: 24px;
+}
+
+.postcomment{
+  width: 120px;
+    height: 36px;
+    background-color: rgb(17 122 141);
+    border-radius: 16px;
+    font-size: 15px;
+    position: relative;
+    top: -60px;
+    cursor: pointer;
+}
+.commentsdiv {
+  display: none;
+  position: relative;
+    left: 130px;
+    top: -20px;
+}
+.replytweet-wrapper{
+  max-width: 70%;
+    min-width: 65%;
+    min-height: 80px;
+    /* padding: 1px 40px; */
+    background-color: transparent;
+    position: relative;
+    left: 110px;
+}
+.usertweet-reply{
+  position: relative;
+  top: 190px;
+  box-shadow: rgb(17 119 170) 0px 6px 26px;
+  max-width: 70%;
+  min-width: 65%;
+  min-height: 140px;
+  padding: 1px 40px;
+  border-radius: 6px;
+  background-color: transparent;
+}
