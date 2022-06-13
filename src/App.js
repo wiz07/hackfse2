@@ -26,7 +26,6 @@ function App(props) {
       replace("/admin")
     }
   }
-  console.log(userLogged)
   return (
     <div className="App" style={{ zoom: "80%" }}>
       <BrowserRouter>
@@ -41,7 +40,7 @@ function App(props) {
                 setUserLogged={setUserLogged} />
             )} />
             <PublicRoute path="/register" component={Register} />
-            <PrivateRoute path="/home" component={UserHome} onEnter={authHandler} />
+            <PublicRoute path="/home" component={UserHome} onEnter={authHandler} />
             <PublicRoute path="/user" component={RegisterUser} />
             <PublicRoute path="/admin" component={AdminHome} />
             <PublicRoute path="/success" component={Success} />
